@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice graphique - Marine GAREIN</title>
+    <!-- Bootstrap cdn CSS version de 2023  wip avec lastest version 5.3.6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Calculatrice</h1>
+    
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="7" onclick="addToDisplay('7')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="8" onclick="addToDisplay('8')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="9" onclick="addToDisplay('9')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn calculator-btn operator" value="+" onclick="addToDisplay('+')">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="4" onclick="addToDisplay('4')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="5" onclick="addToDisplay('5')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="6" onclick="addToDisplay('6')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn calculator-btn operator" value="-" onclick="addToDisplay('-')">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="1" onclick="addToDisplay('1')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="2" onclick="addToDisplay('2')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="3" onclick="addToDisplay('3')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn calculator-btn operator" value="*" onclick="addToDisplay('*')">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="0" onclick="addToDisplay('0')">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn btn-light calculator-btn" value="C" onclick="clearDisplay()">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn calculator-btn equals" value="=" onclick="calculate()">
+        </div>
+        <div class="col-3">
+          <input type="button" class="btn calculator-btn operator" value="/" onclick="addToDisplay('/')">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap cdn js version de 2023, wip avec lastest version 5.3.6 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

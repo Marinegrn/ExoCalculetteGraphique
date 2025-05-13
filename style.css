@@ -1,0 +1,48 @@
+:root {
+    --border-color-light: #ddd;
+    --border-color-dark: #ccc;
+    --background-color-light: #f8f9fa;
+    --background-color-dark: #fff; 
+    --background-color-btn-operator: #f1c40f;
+    --background-color-equal:  #3498db;
+    --color-btn: white;
+}
+
+.calculator {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color-light);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    background-color: var(--background-color-light);
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: right;
+    background-color: var(--background-color-dark);
+    border: 1px solid var(--border-color-dark);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.calculator-btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.operator {
+    background-color: var(--background-color-btn-operator);
+    color: var(--color-btn);
+}
+
+.equals {
+    background-color: var(--background-color-equal);
+    color: var(--color-btn);
+}
