@@ -5,7 +5,6 @@ let shouldResetInput = false;
 let lastOperator = null;
 let parenthesesCount = 0;
 
-// Éléments DOM
 const display = document.getElementById('display');
 const expressionDisplay = document.getElementById('expression');
 const numberButtons = document.querySelectorAll('.number');
@@ -14,7 +13,6 @@ const equalsButton = document.getElementById('equals');
 const clearButton = document.getElementById('clear');
 const decimalButton = document.querySelector('.decimal');
 
-// Fonction d'initialisation
 function init() {
     attachEventListeners();
     updateDisplay();
@@ -101,7 +99,6 @@ function handleOperatorInput(operator) {
         // Si on enchaîne des opérateurs, remplacer le dernier
         currentExpression = currentExpression.slice(0, -1) + operator;
     } else {
-        // Ajouter l'expression courante et l'opérateur
         currentExpression += currentInput + operator;
         currentInput = '0';
     }
@@ -118,7 +115,6 @@ function calculate() {
     }
 
     try {
-        // Évaluer l'expression mathématique
         const result = evaluateExpression(expressionToEvaluate);
         
         // Mettre à jour l'affichage
@@ -128,7 +124,6 @@ function calculate() {
         parenthesesCount = 0;
         updateDisplay();
     } catch (error) {
-        // Gérer les erreurs
         currentInput = 'Erreur';
         shouldResetInput = true;
         updateDisplay();
@@ -193,5 +188,4 @@ function handleKeyboardInput(event) {
     }
 };
 
-// Initialiser la calculatrice au chargement
 document.addEventListener('DOMContentLoaded', init);
