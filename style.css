@@ -1,48 +1,61 @@
-:root {
-    --border-color-light: #ddd;
-    --border-color-dark: #ccc;
-    --background-color-light: #f8f9fa;
-    --background-color-dark: #fff; 
-    --background-color-btn-operator: #f1c40f;
-    --background-color-equal:  #3498db;
-    --color-btn: white;
-}
-
-.calculator {
-    max-width: 300px;
-    margin: 0 auto;
-    border: 1px solid var(--border-color-light);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 10px;
-    background-color: var(--background-color-light);
+/* Styles personnalisés pour la calculatrice */
+.calculator-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .display {
-    width: 100%;
-    height: 60px;
-    margin-bottom: 10px;
-    font-size: 24px;
-    text-align: right;
-    background-color: var(--background-color-dark);
-    border: 1px solid var(--border-color-dark);
-    border-radius: 3px;
-    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    min-height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.calculator-btn {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 10px;
-    font-size: 18px;
+#expression {
+    min-height: 1.2rem;
 }
 
-.operator {
-    background-color: var(--background-color-btn-operator);
-    color: var(--color-btn);
+.calculator-buttons button {
+    font-size: 1.25rem;
+    border-radius: 6px;
+    height: 3rem;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
-.equals {
-    background-color: var(--background-color-equal);
-    color: var(--color-btn);
+.calculator-buttons button:active {
+    transform: scale(0.95);
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #e9ecef;
+}
+
+.btn-warning {
+    background-color: #fd7e14;
+    border-color: #fd7e14;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e76b08;
+    border-color: #e76b08;
+    color: white;
+}
+
+.btn-success {
+    background-color: #20c997;
+    border-color: #20c997;
+}
+
+.btn-success:hover {
+    background-color: #1ba584;
+    border-color: #1ba584;
 }
