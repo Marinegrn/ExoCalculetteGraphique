@@ -18,7 +18,7 @@ function init() {
     updateDisplay();
 };
 
-// Attache les écouteurs d'événements
+// Ecouteurs d'événements
 function attachEventListeners() {
     // Boutons numériques
     numberButtons.forEach(button => {
@@ -152,7 +152,7 @@ function clearCalculator() {
     updateDisplay();
 };
 
-// Met à jour l'affichage
+// MAJ affichage
 function updateDisplay() {
     display.textContent = currentInput;
     expressionDisplay.textContent = currentExpression;
